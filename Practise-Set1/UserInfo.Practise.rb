@@ -1,28 +1,27 @@
-module Print
-    ORG = "Institution"
-    def printUsrInfo(*rest)
-        for i in rest
-            puts (i);
-        super        
-    end    
+module Disp
+    def self.printUsrInfo(*rest)
+       puts rest
     end
 end
 
 class UserInfo
-    prepend Print
+    extend Disp
     def initialize
+        puts "Enter Name: "
         @name = gets
+        puts "Enter Department: "
         @dep = gets
+        puts "Enter College: "
         @cllg = gets
     end
 
     def output
-        puts Print.printUsrInfo(@name,@dep,@cllg)
+        puts "User Information: "
+        puts Disp.printUsrInfo(@name,@dep,@cllg)
     end
     
     
 end
 
 usrObj = UserInfo.new
-# p usrObj::ORG
 usrObj.output()

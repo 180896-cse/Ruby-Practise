@@ -11,6 +11,12 @@ module Mfunc
     end;  
 end;
 
-module Mcntrl
-
+module Moduleadd
+    def self.findSum(arr)
+        @sum =0
+        for i in arr
+            @sum += i.to_i
+        end
+        puts @sum
+    end
 end

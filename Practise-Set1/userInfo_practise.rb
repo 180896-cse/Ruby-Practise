@@ -1,8 +1,4 @@
-module Disp
-    def self.printUsrInfo(*rest)
-       puts rest
-    end
-end
+require_relative "./cmmn_modules.rb"
 
 class UserInfo
     extend Disp
@@ -17,7 +13,7 @@ class UserInfo
 
     def output
         puts "User Information: "
-        puts Disp.printUsrInfo(@name,@dep,@cllg)
+        puts Disp::printUsrInfo(@name,@dep,@cllg)
     end
     
     
